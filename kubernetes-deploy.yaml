@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sa-healthcare-webappimg-deploy
+  labels:
+    app: sa-healthcare-webappimg-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sa-healthcare-webappimg-app
+  template:
+    metadata:
+      labels:
+        app: sa-healthcare-webappimg-app
+    spec:
+      containers:
+      - name: sa-healthcare-webappimg-container
+        image: sa-healthcare-webappimg
+        ports:
+        - containerPort: 8082
+~
