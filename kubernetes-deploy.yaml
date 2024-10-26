@@ -16,6 +16,21 @@ spec:
     spec:
       containers:
       - name: sa-healthcare-webappimg-container
-        image: reshma164/sa-healthcare-webappimg:latest
+        image: reshma164/sa-healthcare-webappimg
         ports:
         - containerPort: 8082
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sa-healthcare-webapp-np-service
+  labels:
+    app: sa-healthcare-webapp-app
+spec:
+  selector:
+    app: sa-healthcare-webapp-app
+
+  type: NodePort
+  ports: 
+    - port: 8082
+      targetPort: 8082
