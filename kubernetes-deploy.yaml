@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: sa-healthcare-webappimg-container
-        image: sa-healthcare-webappimg:1
+        image: reshma164/sa-healthcare-webappimg:latest
         ports:
         - containerPort: 8082
