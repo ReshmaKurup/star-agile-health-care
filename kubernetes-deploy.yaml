@@ -25,10 +25,10 @@ kind: Service
 metadata:
   name: sa-healthcare-webapp-np-service
   labels:
-    app: sa-healthcare-webapp-app
+    app: sa-healthcare-webappimg-app
 spec:
   selector:
-    app: sa-healthcare-webapp-app
+    app: sa-healthcare-webappimg-app
   type: NodePort
   ports: 
     - port: 8082
