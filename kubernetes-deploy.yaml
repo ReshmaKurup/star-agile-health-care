@@ -29,7 +29,6 @@ metadata:
 spec:
   selector:
     app: sa-healthcare-webapp-app
-
   type: NodePort
   ports: 
     - port: 8082
